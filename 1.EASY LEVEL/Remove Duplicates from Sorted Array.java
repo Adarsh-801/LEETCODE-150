@@ -26,6 +26,29 @@ class Solution {
 
 
 -------------------------------------------------------------OPTIMIZED APPRAOCH---------------------------------------------------------------------------------------
+           
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        
+        //base case
+        if(nums.length == 0)    return 0;
+        
+        //working
+        int i =0;
+        
+        for(int j=1; j<nums.length; j++){
+            
+            if(nums[i] != nums[j]){
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        
+        //dry run to understand the code
+        return i+1;
+    }
+}
   
 
 
